@@ -11,6 +11,22 @@
         // Give the button an onclick attribute that calls the function changeColor
         // The function should change the color of the webpage.
 
+        const colors = ['red','orange','yellow','green','blue','rebeccapurple','violet'];
+        let colorIndex = 0;
+        function changeColor(){
+            /*
+                Slightly less efficient way:
+                if (colorIndex > 6){
+                    colorIndex = 0;
+             */
+
+            // Use modulus so that the colors never end
+            document.body.style.background = colors[colorIndex % 7];
+
+            // Super Lame way: colorIndex = colorIndex + 1;
+            // Slightly Lame way: colorIndex += 1;
+            colorIndex++;
+        }
 
 
     </script>
@@ -21,7 +37,7 @@
     <div class="row">
         <div class="col">
             <!-- Put the Button Here! -->
-
+            <button class="btn btn-danger" onclick="changeColor()" id="button">Click Me</button>
         </div>
     </div>
 </div>
