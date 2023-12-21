@@ -11,7 +11,7 @@
     <div class='row'>
         <div class='col'>
             <!-- Put the Button Here! -->
-
+            <button onClick="changeAlert()">Click Me</button>
         </div>
     </div>
 </div>
@@ -23,7 +23,12 @@
     // Give the button an onclick attribute that calls the function changeAlert
     // The function should pop up an alert with a different message each click.
     // Store the messages in an array.
-
+    const messages = ['Hello', 'Hi', 'Hey', 'Howdy', 'Hola', 'Bonjour']
+    let messageIndex = 0;
+    function changeAlert(){
+        alert(messages[messageIndex % 6]);
+        messageIndex++;
+    }
 
 </script>
 </body>
